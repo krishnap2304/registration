@@ -1,0 +1,45 @@
+server:
+  port: 8092
+  host: localhost
+spring:
+  application:
+    name: RegistrationAPI
+  data:
+    mongodb:
+      database: login_db
+      port: 20171
+      host: localhost
+  mail:
+    host: smtp.gmail.com
+    properties:
+      mail:
+        smtp:
+          auth: false
+        starttls: true
+    port: 587
+
+
+  main:
+    allow-bean-definition-overriding: true
+  devtools:
+    livereload:
+      port: 35730
+      enabled: true
+    restart:
+      additional-exclude: /webapp/**,/WEB-INF/view/**
+      enabled: true
+app:
+  jwtSecret: "*S*E*C*R*E*T*K*E*Y"
+  jwtExpiration: 8640000
+
+
+recaptcha:
+  verification:
+    endpoint: https://www.google.com/recaptcha/api/siteverify
+  secret: 6LfBMe0aAAAAAMm5nCS8kqrMsbhgJzBXU6U1OWDE
+
+
+
+
+
+
