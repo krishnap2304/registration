@@ -36,7 +36,7 @@ app:
 recaptcha:
   verification:
     endpoint: https://www.google.com/recaptcha/api/siteverify
-  secret: 6LfBMe0aAAAAAMm5nCS8kqrMsbhgJzBXU6U1OWDE
+  secret: your secret
 
 
 
