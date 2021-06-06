@@ -12,7 +12,7 @@ public class CaptchaTokenService {
     private RestTemplate template;
 
 
-    String siteKey = "6LeZmfEaAAAAACBI5Ld-TPg6uhRMkZ6foarbHk0U";
+    String siteKey = "you site key";
     String recaptchaEndpoint = "https://www.google.com/recaptcha/api.js?render=" + siteKey;
 
     public CaptchaTokenService() {
