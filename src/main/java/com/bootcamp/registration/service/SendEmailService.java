@@ -20,7 +20,7 @@ public class SendEmailService {
     public void sendEmail(String recipientEmail, String link_to_reset_password) throws MessagingException, UnsupportedEncodingException {
         MimeMessage message = javaMailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message);
-        helper.setFrom("testuserat@gmail.com","Login Support");
+        helper.setFrom("pillemkrishna@gmail.com","Login Support");
         helper.setTo(recipientEmail);
 
         String subject = "Your Registration to the site is successful.";

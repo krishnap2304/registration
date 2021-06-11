@@ -1,0 +1,15 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+    metrics:
+      tags:
+        application: RegistrationAPI
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "127.0.0.1"

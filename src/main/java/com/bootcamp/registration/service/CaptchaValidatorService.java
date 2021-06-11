@@ -20,7 +20,7 @@ public class CaptchaValidatorService {
 
     String recaptchaEndpoint= "https://www.google.com/recaptcha/api/siteverify";
 
-    String recaptchaSecret= "your secret";
+    String recaptchaSecret= "6LeZmfEaAAAAAB2EA4AJ4Nq9QzAhrapHMvCRFxHT";
     public CaptchaValidatorService() {
         RestTemplateBuilder templateBuilder = new RestTemplateBuilder();
         template = templateBuilder.build();
@@ -55,7 +55,7 @@ public class CaptchaValidatorService {
 //    public static void main(String[] args) {
 //        CaptchaValidatorService service = new CaptchaValidatorService();
 //        final MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
-//        params.add("secret", "yoursecret");
+//        params.add("secret", "6LfBMe0aAAAAAMm5nCS8kqrMsbhgJzBXU6U1OWDE");
 //        RestTemplateBuilder templateBuilder = new RestTemplateBuilder();
 //        RestTemplate template = templateBuilder.build();
 //        CaptchaResponse apiResponse = null;

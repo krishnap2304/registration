@@ -117,26 +117,155 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
+    public RoleRepository getRoleRepostiry(){
+        return new RoleRepository() {
+            @Override
+            public Optional<Role> findByName(RoleEnum name) {
+                return Optional.empty();
+            }
+
+            @Override
+            public Boolean existsByName(RoleEnum name) {
+                return null;
+            }
+
+            @Override
+            public void deleteAllById(Iterable<? extends String> iterable) {
+
+            }
+
+            @Override
+            public <S extends Role> List<S> saveAll(Iterable<S> iterable) {
+                return null;
+            }
+
+            @Override
+            public List<Role> findAll() {
+                return null;
+            }
+
+            @Override
+            public List<Role> findAll(Sort sort) {
+                return null;
+            }
+
+            @Override
+            public <S extends Role> S insert(S s) {
+                return null;
+            }
+
+            @Override
+            public <S extends Role> List<S> insert(Iterable<S> iterable) {
+                return null;
+            }
+
+            @Override
+            public <S extends Role> List<S> findAll(Example<S> example) {
+                return null;
+            }
+
+            @Override
+            public <S extends Role> List<S> findAll(Example<S> example, Sort sort) {
+                return null;
+            }
+
+            @Override
+            public Page<Role> findAll(Pageable pageable) {
+                return null;
+            }
+
+            @Override
+            public <S extends Role> S save(S s) {
+                return null;
+            }
+
+            @Override
+            public Optional<Role> findById(String s) {
+                return Optional.empty();
+            }
+
+            @Override
+            public boolean existsById(String s) {
+                return false;
+            }
+
+            @Override
+            public Iterable<Role> findAllById(Iterable<String> iterable) {
+                return null;
+            }
+
+            @Override
+            public long count() {
+                return 0;
+            }
+
+            @Override
+            public void deleteById(String s) {
+
+            }
+
+            @Override
+            public void delete(Role role) {
+
+            }
+
+            @Override
+            public void deleteAll(Iterable<? extends Role> iterable) {
+
+            }
+
+            @Override
+            public void deleteAll() {
+
+            }
+
+            @Override
+            public <S extends Role> Optional<S> findOne(Example<S> example) {
+                return Optional.empty();
+            }
+
+            @Override
+            public <S extends Role> Page<S> findAll(Example<S> example, Pageable pageable) {
+                return null;
+            }
+
+            @Override
+            public <S extends Role> long count(Example<S> example) {
+                return 0;
+            }
+
+            @Override
+            public <S extends Role> boolean exists(Example<S> example) {
+                return false;
+            }
+        };
+    }
+    @Bean
     public UserRepository getUserRepository(){
         return new UserRepository() {
             @Override
             public Optional<User> findByUsername(String username) {
-               return Optional.empty() ;
+                return Optional.empty();
             }
 
             @Override
             public Boolean existsByUsername(String username) {
-                return false;
+                return null;
             }
 
             @Override
             public Boolean existsByEmail(String email) {
-                return false;
+                return null;
             }
 
             @Override
             public Optional<User> findByEmail(String email) {
                 return Optional.empty();
+            }
+
+            @Override
+            public void deleteAllById(Iterable<? extends String> iterable) {
+
             }
 
             @Override
@@ -215,11 +344,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             }
 
             @Override
-            public void deleteAllById(Iterable<? extends String> iterable) {
-
-            }
-
-            @Override
             public void deleteAll(Iterable<? extends User> iterable) {
 
             }
@@ -251,129 +375,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         };
     }
 
-    @Bean
-    public RoleRepository getRoleRespository(){
-        return new RoleRepository() {
-            @Override
-            public Optional<Role> findByName(RoleEnum name) {
-                return Optional.empty();
-            }
-
-            @Override
-            public <S extends Role> List<S> saveAll(Iterable<S> iterable) {
-                return null;
-            }
-
-            @Override
-            public Boolean existsByName(RoleEnum name){
-                return false;
-            }
-
-            @Override
-            public List<Role> findAll() {
-                return null;
-            }
-
-            @Override
-            public List<Role> findAll(Sort sort) {
-                return null;
-            }
-
-            @Override
-            public <S extends Role> S insert(S s) {
-                return null;
-            }
-
-            @Override
-            public <S extends Role> List<S> insert(Iterable<S> iterable) {
-                return null;
-            }
-
-            @Override
-            public <S extends Role> List<S> findAll(Example<S> example) {
-                return null;
-            }
-
-            @Override
-            public <S extends Role> List<S> findAll(Example<S> example, Sort sort) {
-                return null;
-            }
-
-            @Override
-            public Page<Role> findAll(Pageable pageable) {
-                return null;
-            }
-
-            @Override
-            public <S extends Role> S save(S s) {
-                return null;
-            }
-
-            @Override
-            public Optional<Role> findById(String s) {
-                return Optional.empty();
-            }
-
-            @Override
-            public boolean existsById(String s) {
-                return false;
-            }
-
-            @Override
-            public Iterable<Role> findAllById(Iterable<String> iterable) {
-                return null;
-            }
-
-            @Override
-            public long count() {
-                return 0;
-            }
-
-            @Override
-            public void deleteById(String s) {
-
-            }
-
-            @Override
-            public void delete(Role role) {
-
-            }
-
-            @Override
-            public void deleteAllById(Iterable<? extends String> iterable) {
-
-            }
-
-            @Override
-            public void deleteAll(Iterable<? extends Role> iterable) {
-
-            }
-
-            @Override
-            public void deleteAll() {
-
-            }
-
-            @Override
-            public <S extends Role> Optional<S> findOne(Example<S> example) {
-                return Optional.empty();
-            }
-
-            @Override
-            public <S extends Role> Page<S> findAll(Example<S> example, Pageable pageable) {
-                return null;
-            }
-
-            @Override
-            public <S extends Role> long count(Example<S> example) {
-                return 0;
-            }
-
-            @Override
-            public <S extends Role> boolean exists(Example<S> example) {
-                return false;
-            }
-        };
-    }
 
 }
