@@ -27,7 +27,7 @@ import java.util.Set;
  */
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/api/signup")
 public class RegistrationController {
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 
@@ -52,7 +52,7 @@ public class RegistrationController {
      * @param signupRequest
      * @return
      */
-    @PostMapping("/signup")
+    @PostMapping
     public ResponseEntity<?> registerUser(@RequestBody SignupRequest signupRequest) {
         boolean isvalidCaptcha = captchaValidatorService.validateCaptcha(signupRequest.getCaptchaResp(), null);
         if (!isvalidCaptcha) {
